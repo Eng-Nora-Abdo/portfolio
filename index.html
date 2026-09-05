@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nora Abdo | Junior Front-End Developer Portfolio</title>
+    <meta name="description" content="Official portfolio of Nora Abdo, Junior Front-End Developer specializing in React.js, Tailwind CSS, JavaScript (ES6+), and responsive web development." />
+    <meta name="keywords" content="Nora Abdo, Nora Abdelnaby, Front-End Developer, React Developer, Web Developer Portfolio, Ammarha, Tailwind CSS, JavaScript" />
+    <meta name="author" content="Nora Abdo" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Nora Abdo | Junior Front-End Developer" />
+    <meta property="og:description" content="Building responsive, intuitive, and modern web applications with React.js & modern front-end tech." />
+    <meta property="og:type" content="website" />
+    <!-- Prevent Flash of Wrong Theme Script -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#fcfaff] dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-rose-200 selection:text-rose-900 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
