@@ -5,92 +5,108 @@ import { personalInfo } from '../../data/portfolioData';
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-slate-300 py-16 relative overflow-hidden transition-colors border-t border-slate-800 dark:border-slate-900">
+    <footer className="relative overflow-hidden border-t border-slate-200 bg-white text-slate-600 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
+
       {/* Subtle Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-rose-500/10 blur-3xl pointer-events-none"></div>
+      <div className="pointer-events-none absolute -bottom-20 left-1/2 h-40 w-96 -translate-x-1/2 rounded-full bg-rose-500/5 blur-3xl dark:bg-rose-500/10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-slate-800 dark:border-slate-850">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
 
-          {/* Left Brand info */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-rose-500 to-purple-600 flex items-center justify-center text-white font-bold">
-                <Code2 className="w-5 h-5" />
+        {/* Main Footer Content */}
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+
+          {/* Brand */}
+          <div className="text-center sm:text-left">
+
+            <div className="mb-3 flex items-center justify-center gap-2.5 sm:justify-start">
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-purple-600 text-white shadow-sm">
+                <Code2 className="h-5 w-5" />
               </div>
-              <span className="text-xl font-extrabold text-white tracking-tight">
-                {personalInfo.displayName || "Nora Abdo"}
+
+              <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">
+                {personalInfo.displayName}
               </span>
+
             </div>
-            <p className="text-xs text-rose-400 font-semibold uppercase tracking-wider mb-2">
-              {personalInfo.subtitle || "FRONT-END DEVELOPER"}
+
+            <p className="max-w-md text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+              Front-End Developer building responsive, modern, and
+              user-friendly web experiences.
             </p>
-            <p className="text-sm text-slate-400 max-w-sm">
-              Building responsive, intuitive, and modern web applications with passion and precision.
-            </p>
+
           </div>
 
-          {/* Center Navigation Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
-            <a href="#home" className="hover:text-rose-400 transition-colors">Home</a>
-            <a href="#about" className="hover:text-rose-400 transition-colors">About</a>
-            <a href="#skills" className="hover:text-rose-400 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-rose-400 transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-rose-400 transition-colors">Experience</a>
-            <a href="#education" className="hover:text-rose-400 transition-colors">Education</a>
-            <a href="#contact" className="hover:text-rose-400 transition-colors">Contact</a>
-          </div>
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-3 sm:justify-end">
 
-          {/* Right Social & Back To Top */}
-          <div className="flex items-center gap-4">
+            {/* GitHub */}
             <a
               href={personalInfo.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 hover:bg-rose-500 hover:text-white flex items-center justify-center transition-all border border-slate-700 dark:border-slate-800"
               aria-label="GitHub"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
-              <GithubIcon className="w-5 h-5" />
+              <GithubIcon className="h-5 w-5" />
             </a>
+
+            {/* LinkedIn */}
             <a
               href={personalInfo.socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 hover:bg-rose-500 hover:text-white flex items-center justify-center transition-all border border-slate-700 dark:border-slate-800"
               aria-label="LinkedIn"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
-              <LinkedinIcon className="w-5 h-5" />
-            </a>
-            <a
-              href={personalInfo.socialLinks.email}
-              className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-900 hover:bg-rose-500 hover:text-white flex items-center justify-center transition-all border border-slate-700 dark:border-slate-800"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
+              <LinkedinIcon className="h-5 w-5" />
             </a>
 
+            {/* Email */}
+            <a
+              href={personalInfo.socialLinks.email}
+              aria-label="Email"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-rose-500 hover:bg-rose-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+            >
+              <Mail className="h-5 w-5" />
+            </a>
+
+            {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 rounded-full bg-rose-500 text-white flex items-center justify-center hover:bg-rose-600 transition-all shadow-md ml-2"
               aria-label="Back to top"
+              className="ml-1 flex h-10 w-10 items-center justify-center rounded-full bg-rose-500 text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose-600"
             >
-              <ArrowUp className="w-5 h-5" />
+              <ArrowUp className="h-5 w-5" />
             </button>
+
           </div>
 
         </div>
 
-        {/* Bottom Copyright line */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} {personalInfo.displayName || "Nora Abdo"}. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Crafted with React.js & Tailwind CSS
+        {/* Divider */}
+        <div className="my-7 h-px bg-slate-200 dark:bg-slate-800" />
+
+        {/* Bottom */}
+        <div className="flex flex-col items-center justify-between gap-2 text-center text-xs text-slate-400 sm:flex-row sm:text-left dark:text-slate-500">
+
+          <p>
+            © {new Date().getFullYear()} {personalInfo.displayName}. All rights reserved.
           </p>
+
+          <p>
+            React.js · Tailwind CSS
+          </p>
+
         </div>
+
       </div>
     </footer>
   );

@@ -9,7 +9,6 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import ExperienceSection from './components/sections/ExperienceSection';
 import EducationSection from './components/sections/EducationSection';
 import CertificatesSection from './components/sections/CertificatesSection';
-import WhyMeSection from './components/sections/WhyMeSection';
 import ContactSection from './components/sections/ContactSection';
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
           <ExperienceSection />
           <EducationSection />
           <CertificatesSection />
-          <WhyMeSection />
           <ContactSection />
         </main>
 
