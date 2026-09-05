@@ -1,7 +1,7 @@
 # 🌐 Nora Abdo — Front-End Developer Portfolio
 
 <p align="center">
-  <a href="https://portfolio-1412.vercel.app/](https://portfolio-two-smoky-61.vercel.app/">
+  <a href="https://portfolio-two-smoky-61.vercel.app/">
     <strong>🌐 View Live Portfolio</strong>
   </a>
 </p>
@@ -79,7 +79,7 @@ A modern home maintenance platform designed to connect customers with technician
 
 **Visit my portfolio:**
 
-👉 https://portfolio-1412.vercel.app/
+👉 https://portfolio-two-smoky-61.vercel.app/
 
 ## 💻 Run Locally
 
@@ -115,7 +115,7 @@ I'm open to **internship opportunities, collaborations, and front-end developmen
 
 * 📧 Email: [norabdoo16272@gmail.com](mailto:norabdoo16272@gmail.com)
 * 💻 GitHub: https://github.com/Eng-Nora-Abdo
-* 🌐 Portfolio: https://portfolio-1412.vercel.app/](https://portfolio-two-smoky-61.vercel.app/
+* 🌐 Portfolio: https://portfolio-two-smoky-61.vercel.app/
 
 ---
 
