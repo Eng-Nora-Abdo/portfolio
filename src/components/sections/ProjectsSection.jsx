@@ -1,11 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Users, User, Sparkles } from 'lucide-react';
 import { GithubIcon } from '../common/SocialIcons';
 import SectionHeader from '../common/SectionHeader';
 import { projectsData } from '../../data/portfolioData';
 
 const ProjectsSection = () => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filterOptions = [
+    { label: 'All Projects', value: 'all', count: projectsData.length },
+    {
+      label: 'React.js',
+      value: 'react',
+      count: projectsData.filter((p) => p.category === 'react').length,
+    },
+    {
+      label: 'Full Stack',
+      value: 'fullstack',
+      count: projectsData.filter((p) => p.category === 'fullstack').length,
+    },
+  ];
+
+  const filteredProjects =
+    activeFilter === 'all'
+      ? projectsData
+      : projectsData.filter((p) => p.category === activeFilter);
+
   return (
     <section id="projects" className="py-16 md:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,17 +36,48 @@ const ProjectsSection = () => {
           subtitle="A selection of responsive web applications built with modern front-end technologies."
         />
 
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10">
+          {filterOptions.map((filter) => {
+            const isActive = activeFilter === filter.value;
+            return (
+              <button
+                key={filter.value}
+                onClick={() => setActiveFilter(filter.value)}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                  isActive
+                    ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25 scale-105'
+                    : 'bg-white/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-300 border border-rose-100 dark:border-slate-800 hover:border-rose-300 dark:hover:border-slate-700 hover:text-rose-600 dark:hover:text-rose-400'
+                }`}
+              >
+                <span>{filter.label}</span>
+                <span
+                  className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
+                    isActive
+                      ? 'bg-white/20 text-white'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                  }`}
+                >
+                  {filter.count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
         {/* 3-Column Grid on Desktop, 2 on Tablet, 1 on Mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
-          {projectsData.map((project, idx) => (
-            <motion.article
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group border border-rose-100/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md"
-            >
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, idx) => (
+              <motion.article
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
+                className="glass-card glass-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group border border-rose-100/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md"
+              >
               <div>
                 {/* Compact Image Header */}
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
@@ -120,7 +172,8 @@ const ProjectsSection = () => {
               </div>
             </motion.article>
           ))}
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

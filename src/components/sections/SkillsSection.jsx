@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import {
   FileCode, Palette, Code2, Atom, Wind, Layout,
   GitBranch, Laptop, Cpu,
-  Smartphone, Globe, Navigation, Zap, CheckCircle2
+  Smartphone, Globe, Navigation, Zap, CheckCircle2,
+  Database, Layers, Radio, Map, Sparkles, BarChart3, Send, ClipboardList
 } from 'lucide-react';
 import { GithubIcon } from '../common/SocialIcons';
 import SectionHeader from '../common/SectionHeader';
@@ -14,6 +15,7 @@ const iconMap = {
   FileCode: FileCode,
   Palette: Palette,
   JsSquare: Code2,
+  Code2: Code2,
   Atom: Atom,
   Wind: Wind,
   Layout: Layout,
@@ -24,7 +26,17 @@ const iconMap = {
   Smartphone: Smartphone,
   Globe: Globe,
   Navigation: Navigation,
-  Zap: Zap
+  Zap: Zap,
+  Database: Database,
+  Layers: Layers,
+  Radio: Radio,
+  Map: Map,
+  Sparkles: Sparkles,
+  BarChart3: BarChart3,
+  Send: Send,
+  ClipboardList: ClipboardList,
+  Figma: Palette,
+  CheckCircle2: CheckCircle2,
 };
 
 const SkillsSection = () => {

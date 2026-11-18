@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, ArrowUp, Code2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from './SocialIcons';
 import { personalInfo } from '../../data/portfolioData';
 
 const Footer = () => {
@@ -68,6 +68,19 @@ const Footer = () => {
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
+
+            {/* WhatsApp */}
+            {personalInfo.socialLinks.whatsapp && (
+              <a
+                href={personalInfo.socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              >
+                <WhatsAppIcon className="h-4.5 w-4.5" />
+              </a>
+            )}
 
             {/* Email */}
             <a

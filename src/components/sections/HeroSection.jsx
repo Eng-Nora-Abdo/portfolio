@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight, Mail, Sparkles } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsAppIcon } from '../common/SocialIcons';
 import { personalInfo } from '../../data/portfolioData';
 import profilePhoto from '../../assets/1772643347242.jpg';
 
@@ -185,6 +185,17 @@ const HeroSection = () => {
                 >
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
+                {personalInfo.socialLinks.whatsapp && (
+                  <a
+                    href={personalInfo.socialLinks.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp Contact"
+                    className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-emerald-100 dark:border-slate-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 hover:text-white hover:bg-emerald-500 hover:border-emerald-500 hover:-translate-y-0.5 transition-all shadow-xs"
+                  >
+                    <WhatsAppIcon className="w-4.5 h-4.5" />
+                  </a>
+                )}
                 <a
                   href={personalInfo.socialLinks.email}
                   aria-label="Send Email"

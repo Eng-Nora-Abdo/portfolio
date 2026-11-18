@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../common/SocialIcons';
 import SectionHeader from '../common/SectionHeader';
 import { personalInfo } from '../../data/portfolioData';
@@ -121,6 +121,27 @@ ${formData.message}`;
                   </p>
                   <p className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                     {personalInfo.phone}
+                  </p>
+                </div>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/201022603220"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/70 dark:bg-slate-900/70 border border-emerald-100 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-800 hover:bg-emerald-50/60 dark:hover:bg-slate-800 transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-4.5 h-4.5" />
+                </div>
+
+                <div>
+                  <p className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
+                    WhatsApp
+                  </p>
+                  <p className="text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Chat on WhatsApp
                   </p>
                 </div>
               </a>

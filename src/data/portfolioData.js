@@ -28,6 +28,7 @@ export const personalInfo = {
   socialLinks: {
     github: "https://github.com/Eng-Nora-Abdo",
     linkedin: "https://linkedin.com/in/nora-abdo",
+    whatsapp: "https://wa.me/201022603220",
     email: "mailto:norabdoo16272@gmail.com",
   },
 
@@ -95,6 +96,11 @@ export const skillCategories = [
         icon: "Atom",
       },
       {
+        name: "TypeScript",
+        level: "Intermediate",
+        icon: "Code2",
+      },
+      {
         name: "Tailwind CSS",
         level: "Intermediate",
         icon: "Wind",
@@ -143,6 +149,11 @@ export const skillCategories = [
         level: "Intermediate",
         icon: "Figma",
       },
+      {
+        name: "Postman",
+        level: "Intermediate",
+        icon: "Send",
+      },
     ],
   },
 
@@ -171,6 +182,11 @@ export const skillCategories = [
         name: "Context API",
         level: "Intermediate",
         icon: "Layers",
+      },
+      {
+        name: "Formik & Yup",
+        level: "Intermediate",
+        icon: "CheckCircle2",
       },
       {
         name: "Supabase",
@@ -231,6 +247,8 @@ export const projectsData = [
 
     title: "Ammarha – Home Maintenance Platform",
 
+    category: "react",
+
     featured: true,
 
     isTeamProject: true,
@@ -268,6 +286,8 @@ export const projectsData = [
 
     title: "Queen Royal – Beauty & Accessories E-Commerce",
 
+    category: "react",
+
     featured: true,
 
     isTeamProject: false,
@@ -304,6 +324,8 @@ export const projectsData = [
     id: "system-product",
 
     title: "Product Management System",
+
+    category: "fullstack",
 
     featured: true,
 
@@ -344,6 +366,30 @@ export const projectsData = [
 // ------------------------------------------------------------
 
 export const experienceData = [
+  {
+    id: "spacetech",
+
+    role: "React Developer Intern",
+
+    organization: "SpaceTech",
+
+    location: "Alex, Egypt (Remote)",
+
+    period: "07/2026 – 10/2026",
+
+    type: "150-Hour Internship",
+
+    highlights: [
+      "Contributed to front-end architecture and development of InternsHub web application during 150-hour React Developer internship.",
+
+      "Built responsive, reusable UI components using React, TypeScript, and Tailwind CSS, ensuring clean code and cross-device compatibility.",
+
+      "Developed end-to-end user authentication flows with Phone OTP verification and integrated RESTful APIs for dynamic data handling.",
+
+      "Collaborated with agile engineering team using Git and GitHub for version control, branch management, and code reviews.",
+    ],
+  },
+
   {
     id: "ischool",
 
@@ -425,6 +471,20 @@ export const educationData = [
 
 export const certificatesData = [
   {
+    id: "spacetech-certificate",
+
+    title: "React Developer Training Program (150 Hours)",
+
+    issuer: "SpaceTech",
+
+    description:
+      "Successfully completed an intensive 150-hour hands-on React Developer training program covering React.js, component architecture, state management, and real-world web applications.",
+
+    credentialUrl:
+      "/assets/SpaceTech_Certificate.pdf",
+  },
+
+  {
     id: "meta-certificate",
 
     title: "Meta Front-End Developer Professional Certificate",
@@ -432,7 +492,7 @@ export const certificatesData = [
     issuer: "Meta",
 
     description:
-      "Focused on React.js, JavaScript, UI/UX principles, and version control using Git.",
+      "Comprehensive professional specialization covering React.js, advanced JavaScript, UI/UX design principles, and version control using Git.",
 
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/specialization/LKQBINP92WUF",
