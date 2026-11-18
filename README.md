@@ -41,7 +41,7 @@ I'm continuously learning and improving my skills while working on real-world pr
 * VS Code
 * Chrome DevTools
 
-## 🚀 Featured Project
+## 🚀 Featured Projects
 
 ### 🏠 Ammarha — Home Maintenance Platform
 
@@ -61,6 +61,38 @@ A modern home maintenance platform designed to connect customers with technician
 **Tech Stack:**
 
 `React.js` · `Vite` · `Tailwind CSS` · `React Router` · `Axios` · `SignalR` · `Leaflet`
+
+### 👑 Queen Royal — Beauty & Accessories E-Commerce
+
+A responsive e-commerce web application for cosmetics and beauty accessories with cart management and seamless WhatsApp ordering.
+
+**Key Features:**
+
+* Product catalog with real-time search & category filtering
+* Shopping cart with quantity adjustment via React Context API
+* LocalStorage state persistence
+* Direct WhatsApp checkout integration
+* Smooth animated transitions using Framer Motion
+
+**Tech Stack:**
+
+`React.js` · `Vite` · `Tailwind CSS` · `React Router` · `Framer Motion` · `Context API`
+
+### 🛒 Product Management System — Full Stack CRUD
+
+A full-stack product management application combining a modern responsive UI with an Express.js REST API and persistent database.
+
+**Key Features:**
+
+* Complete CRUD operations (Add, View, Edit, Delete, Clear All)
+* Live form validation with real-time visual feedback
+* Instant search with keyword match highlighting
+* Hybrid server connection indicator (Express.js REST API + LocalStorage fallback)
+* Optimized serverless deployment on Vercel
+
+**Tech Stack:**
+
+`JavaScript (ES6+)` · `Node.js` · `Express.js` · `REST API` · `Bootstrap 5` · `HTML5 / CSS3` · `Vercel`
 
 ## ✨ Portfolio Features
 

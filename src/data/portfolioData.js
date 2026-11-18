@@ -42,7 +42,7 @@ export const personalInfo = {
 export const statsData = [
   {
     label: "Featured Projects",
-    value: "2",
+    value: "3",
     icon: "FolderCode",
   },
   {
@@ -192,6 +192,11 @@ export const skillCategories = [
 
     skills: [
       {
+        name: "Node.js & Express",
+        level: "Intermediate",
+        icon: "Cpu",
+      },
+      {
         name: "SignalR",
         level: "Intermediate",
         icon: "Radio",
@@ -293,6 +298,43 @@ export const projectsData = [
 
     liveDemoUrl:
       "https://queen-royal.vercel.app/",
+  },
+
+  {
+    id: "system-product",
+
+    title: "Product Management System",
+
+    featured: true,
+
+    isTeamProject: false,
+
+    contribution:
+      "Full Stack Developer – Responsive UI, Express.js REST API, Live Validation & Database",
+
+    description:
+      "A full-stack product management system featuring live input validation, dynamic search with keyword highlighting, and Express.js REST API with dual-mode data persistence.",
+
+    fullDescription:
+      "Developed a full-stack product management web application featuring a modern responsive interface using Bootstrap 5 and Font Awesome. Designed and built a RESTful API using Node.js and Express.js with JSON database persistence and LocalStorage fallback. Implemented live input validation with instant feedback, interactive search with match highlighting, server status indicator, and deployed serverlessly on Vercel.",
+
+    technologies: [
+      "JavaScript (ES6+)",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Bootstrap 5",
+      "HTML5 / CSS3",
+      "Vercel",
+    ],
+
+    image: "/assets/projects/system-product-preview.jpg",
+
+    githubUrl:
+      "https://github.com/Eng-Nora-Abdo/system-product",
+
+    liveDemoUrl:
+      "https://system-product-8e3s.vercel.app/",
   },
 ];
 
